@@ -1,6 +1,7 @@
 library(ggplot2)
 library(scales)
 library(RgoogleMaps)
+library(plotly)
 
 homes<-read.csv("~/Downloads/LTM_MILL_MAY16.csv", stringsAsFactors = FALSE)
 u<-ggplot(homes, aes(homes$sp, homes$lp, label= homes$add))
