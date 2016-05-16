@@ -50,5 +50,8 @@ u<-ggplot(homes50, aes(homes50$sp, homes50$lp, label= homes50$add))
             scale_y_continuous(labels=comma)+ggtitle("Millburn LTM May 16 List Price vs. Selling Price")+scale_size_area()+
             xlab("home selling price")+ylab("home listing price")+geom_text(check_overlap = TRUE)
           
-        #put into plotly
-        plot_ly(homes, x = dom, y = sp, mode="markers", text = paste("Address: ", add))          
+#put into plotly
+plot_ly(homes, x = dom, y = sp, mode="markers", text = paste("Address: ", add)) 
+
+#with bedrooms
+plot_ly(homes, x = dom, y = sp, mode="markers", size= Beds, text = paste("Address: ", add))
