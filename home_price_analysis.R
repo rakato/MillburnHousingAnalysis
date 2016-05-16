@@ -55,3 +55,7 @@ plot_ly(homes, x = dom, y = sp, mode="markers", text = paste("Address: ", add))
 
 #with bedrooms
 plot_ly(homes, x = dom, y = sp, mode="markers", size= Beds, text = paste("Address: ", add))
+
+#with color and opacity
+plot_ly(homes, x = dom, y = sp, mode="markers", color=Beds, size= Beds, opacity= Beds, text = paste("Address: ", add))
+
